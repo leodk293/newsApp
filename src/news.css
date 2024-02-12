@@ -1,0 +1,151 @@
+.header {
+    border: 1px solid #f1f1f1;
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 100vw;
+    box-shadow: 0 4px 10px rgba(128, 128, 128, 0.805);
+    position: fixed;
+}
+
+.header h1 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.header h1 span {
+    border: 1px solid crimson;
+    background-color: crimson;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+}
+
+.global-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+form input {
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px 0 0 10px;
+    width: 350px;
+}
+
+form button {
+    outline: none;
+    padding: 10px;
+    border-color: transparent;
+    border-radius: 0 10px 10px 0;
+    font-size: 20px;
+    background-color: crimson;
+    width: 100px;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out;
+    text-align: center;
+}
+
+form button:hover {
+    background-color: rgba(220, 20, 60, 0.827);
+
+}
+
+.infos {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    animation: appear 500ms ease-in-out;
+}
+
+@keyframes appear{
+    to{
+        transform: translateY(-60px);
+        opacity: 0.7;
+    }
+
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+    height: 350px;
+    border: 1px solid #111;
+    border-radius: 5px;
+    background-color: #111;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(128, 128, 128, 0.437);
+
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /*border: 1px solid crimson;
+    background-color: crimson;*/
+    color: #fff;
+    border: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+}
+
+.text a {
+    text-decoration: none;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: #fff;
+    color: #111;
+    border-radius: 5px;
+    padding: 5px;
+    width: 120px;
+}
+
+.infos+a {
+    border: 1px solid rgba(0, 0, 255, 0.852);
+    background-color: rgba(0, 0, 255, 0.852);
+    color: #fff;
+    text-decoration: none;
+    width: 120px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    position: fixed;
+    /*right: 0px;*/
+    bottom: 0;
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+@media screen and (max-width : 900px) {
+    .infos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
